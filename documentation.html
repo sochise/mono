@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dokumentace MONO v1.0</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        'neuro-focus': '#0EA5E9',
+                        'neuro-rest': '#F59E0B',
+                        'neuro-bg': '#0F172A',
+                        'neuro-card': '#1E293B'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+
+<body class="bg-neuro-bg text-slate-100 min-h-screen">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-neuro-bg/90 backdrop-blur border-b border-slate-700 z-50">
+        <div class="max-w-5xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html"
+                class="text-2xl font-bold tracking-tighter text-white flex items-center gap-2 hover:text-neuro-focus transition-colors">
+                <img src="assets/logo-icon.png" class="w-8 h-8 rounded-md" alt="Logo">
+                MONO <span class="text-xs align-top text-neuro-focus ml-1">DOCS</span>
+            </a>
+            <a href="index.html" class="text-sm font-medium text-slate-400 hover:text-white transition-colors">← Zpět do
+                Aplikace</a>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="max-w-4xl mx-auto px-6 pt-32 pb-24">
+
+        <!-- Header -->
+        <header class="mb-16 border-b border-slate-700 pb-10">
+            <h1 class="text-5xl font-bold text-white mb-6">Uživatelská Příručka</h1>
+            <p class="text-xl text-slate-400 leading-relaxed">
+                Kompletní průvodce systémem <strong>MONO</strong>. Nástroj pro přechod od nestíhání k monotaskingu a
+                hluboké práci.
+            </p>
+        </header>
+
+        <!-- TOC -->
+        <div class="bg-neuro-card p-8 rounded-xl border border-slate-700 mb-16 shadow-lg">
+            <h2 class="text-lg font-semibold text-white mb-4 uppercase tracking-wider">Obsah</h2>
+            <ul class="grid md:grid-cols-2 gap-4 text-slate-300">
+                <li><a href="#filosofie" class="hover:text-neuro-focus transition-colors flex items-center gap-2"><span
+                            class="text-slate-500">01.</span> Filosofie Designu</a></li>
+                <li><a href="#cyklus" class="hover:text-neuro-focus transition-colors flex items-center gap-2"><span
+                            class="text-slate-500">02.</span> Pracovní Cyklus</a></li>
+                <li><a href="#funkce" class="hover:text-neuro-focus transition-colors flex items-center gap-2"><span
+                            class="text-slate-500">03.</span> Klíčové Funkce</a></li>
+                <li><a href="#youtube" class="hover:text-neuro-focus transition-colors flex items-center gap-2"><span
+                            class="text-slate-500">04.</span> YouTube & Média</a></li>
+                <li><a href="#tech" class="hover:text-neuro-focus transition-colors flex items-center gap-2"><span
+                            class="text-slate-500">05.</span> Technické Tipy</a></li>
+            </ul>
+        </div>
+
+        <!-- Sections -->
+        <article id="filosofie" class="mb-20 scroll-mt-32">
+            <h2 class="text-3xl font-bold text-white mb-6 flex items-center gap-3">
+                <span class="text-neuro-focus">01.</span> Filosofie Designu
+            </h2>
+            <div class="prose prose-invert max-w-none text-slate-300 leading-7">
+                <p>
+                    Většina "to-do" aplikací vás zahlcuje seznamy úkolů. <strong>MONO je jiný.</strong> Je to
+                    "Attention Management System" (Systém řízení pozornosti).
+                    Jeho cílem není, abyste toho "stihli více", ale abyste dělali <strong>to podstatné v hlubším
+                        soustředění</strong>.
+                </p>
+                <div class="bg-slate-800/50 border-l-4 border-neuro-focus p-6 my-6 rounded-r-lg">
+                    <p class="italic mb-2 text-white">"Skutečná produktivita není o rychlosti, ale o jasnosti mysli a
+                        zdravém rytmu."</p>
+                </div>
+                <p>
+                    Aplikace respektuje vaše neurobiologické limity. Využívá <strong
+                        class="text-neuro-focus">Ultragdiánní rytmy</strong> (90 min aktivity) a automaticky vás nutí k
+                    odpočinku dříve, než se vyčerpají vaše zásoby dopaminu.
+                </p>
+            </div>
+        </article>
+
+        <article id="cyklus" class="mb-20 scroll-mt-32">
+            <h2 class="text-3xl font-bold text-white mb-6 flex items-center gap-3">
+                <span class="text-neuro-focus">02.</span> Pracovní Cyklus
+            </h2>
+            <div class="grid gap-8">
+                <div
+                    class="bg-neuro-card p-6 rounded-xl border border-slate-700 hover:border-neuro-focus transition-colors group">
+                    <div class="text-neuro-focus font-bold mb-2 text-lg">Fáze 1: Příprava (Prep)</div>
+                    <p class="text-slate-400">
+                        Mozek potřebuje jasný záměr. V této fázi definujete <strong>JEDEN úkol</strong>. Žádné seznamy.
+                        Zde si také nastavíte zvukovou kulisu (YouTube) a časovač (doporučeno 25-50 min).
+                    </p>
+                </div>
+                <div
+                    class="bg-neuro-card p-6 rounded-xl border border-slate-700 hover:border-neuro-focus transition-colors group">
+                    <div class="text-neuro-focus font-bold mb-2 text-lg">Fáze 2: Práce (Flow)</div>
+                    <p class="text-slate-400">
+                        Vše zmizí. Zůstává jen odpočet a váš úkol.
+                        Využijte <strong>Parkoviště myšlenek</strong> (vpravo nahoře) pro odložení rušivých nápadů, aniž
+                        byste opustili kontext.
+                    </p>
+                </div>
+                <div
+                    class="bg-neuro-card p-6 rounded-xl border border-slate-700 hover:border-neuro-rest transition-colors group">
+                    <div class="text-neuro-rest font-bold mb-2 text-lg">Fáze 3: Regenerace (Regen)</div>
+                    <p class="text-slate-400">
+                        Po skončení časovače se aplikace přepne do Jantarového módu. Nyní <strong>nesmíte
+                            pracovat</strong>.
+                        Aplikace vám nabídne techniky jako NSDR, Box Breathing nebo Mikro-pohyb pro obnovu kognitivních
+                        zdrojů.
+                    </p>
+                </div>
+            </div>
+        </article>
+
+        <article id="funkce" class="mb-20 scroll-mt-32">
+            <h2 class="text-3xl font-bold text-white mb-6 flex items-center gap-3">
+                <span class="text-neuro-focus">03.</span> Klíčové Funkce
+            </h2>
+            <ul class="space-y-6">
+                <li class="flex gap-4">
+                    <div class="bg-slate-800 p-3 rounded-lg h-fit">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+                            class="text-neuro-focus" viewBox="0 0 24 24" stroke="currentColor">
+                            <path d="M12 8v4l3 3" />
+                            <circle cx="12" cy="12" r="9" />
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="text-xl text-white font-semibold mb-1">Cirkadiánní Režim</h3>
+                        <p class="text-slate-400">Aplikace vníma čas. Po 18:00 automaticky přejde do <strong>Večerního
+                                módu</strong> (omezení modrého světla) pro ochranu spánku.</p>
+                    </div>
+                </li>
+                <li class="flex gap-4">
+                    <div class="bg-slate-800 p-3 rounded-lg h-fit">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+                            class="text-neuro-focus" viewBox="0 0 24 24" stroke="currentColor">
+                            <polyline points="21 8 21 21 3 21 3 8" />
+                            <rect x="1" y="3" width="22" height="5" />
+                            <line x1="10" y1="12" x2="14" y2="12" />
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="text-xl text-white font-semibold mb-1">Parkoviště Myšlenek</h3>
+                        <p class="text-slate-400">Posuvný panel vpravo. Slouží jako "externí paměť" pro vše, co vás
+                            napadne během práce. Zapište to a pokračujte. Myšlenky se ukládají lokálně.</p>
+                    </div>
+                </li>
+                <li class="flex gap-4">
+                    <div class="bg-slate-800 p-3 rounded-lg h-fit">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+                            class="text-neuro-focus" viewBox="0 0 24 24" stroke="currentColor">
+                            <path d="M12 20h9" />
+                            <path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z" />
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="text-xl text-white font-semibold mb-1">Blog a Edukace</h3>
+                        <p class="text-slate-400">Integrovaný modul článků (vpravo nahoře "Články") vysvětluje vědu za
+                            technikami jako Hnědý šum nebo NSDR.</p>
+                    </div>
+                </li>
+            </ul>
+        </article>
+
+        <article id="youtube" class="mb-20 scroll-mt-32">
+            <h2 class="text-3xl font-bold text-white mb-6 flex items-center gap-3">
+                <span class="text-neuro-focus">04.</span> YouTube Integrace
+            </h2>
+            <div class="bg-neuro-card p-8 rounded-xl border border-slate-700">
+                <p class="text-slate-300 mb-6">
+                    Můžete vložit libovolné "Focus" video z YouTube (Lofi Girl, Endel, Binaural Beats).
+                    Aplikace automaticky spustí video při startu práce a zastaví ho při pauze.
+                </p>
+
+                <h3 class="text-lg font-semibold text-white mb-2">Doporučené Kanály:</h3>
+                <ul class="list-disc pl-5 text-slate-400 space-y-2 mb-6">
+                    <li><strong>Lofi Girl</strong> - pro studium a rutinní práci.</li>
+                    <li><strong>Endel</strong> - vědecky navržené zvukové krajiny.</li>
+                    <li><strong>Brain.fm</strong> - pro intenzivní kognitivní výkon.</li>
+                </ul>
+
+                <div class="bg-yellow-500/10 border-l-4 border-yellow-500 p-4 rounded-r">
+                    <h4 class="text-yellow-500 font-bold mb-1">Řešení problémů (Error 153)</h4>
+                    <p class="text-sm text-yellow-200/80">
+                        Pokud vidíte chybu 153 (Video unavailable), znamená to, že YouTube blokuje přehrávání ve vašem
+                        souborovém systému.
+                        <strong>Řešení:</strong> Spusťte aplikaci přes lokální server (viz sekce 05).
+                    </p>
+                </div>
+            </div>
+        </article>
+
+        <article id="tech" class="mb-20 scroll-mt-32">
+            <h2 class="text-3xl font-bold text-white mb-6 flex items-center gap-3">
+                <span class="text-neuro-focus">05.</span> Technické Tipy
+            </h2>
+
+            <div class="space-y-8">
+                <div>
+                    <h3 class="text-xl text-white font-semibold mb-3">Spuštění Lokálního Serveru</h3>
+                    <p class="text-slate-400 mb-3">
+                        Pro plnou funkčnost YouTube přehrávače doporučujeme nespouštět soubor <code>index.html</code>
+                        přímo, ale přes Python server.
+                    </p>
+                    <div class="bg-black/50 p-4 rounded-lg font-mono text-sm text-green-400 border border-slate-800">
+                        python3 -m http.server 8000
+                    </div>
+                    <p class="text-slate-500 text-sm mt-2">Poté otevřete v prohlížeči: <a href="http://localhost:8000"
+                            class="text-neuro-focus hover:underline">http://localhost:8000</a></p>
+                </div>
+
+                <div>
+                    <h3 class="text-xl text-white font-semibold mb-3">Data a Soukromí</h3>
+                    <p class="text-slate-400">
+                        Všechna data (historie, parkoviště myšlenek) jsou ukládána <strong>pouze ve vašem
+                            prohlížeči</strong> (LocalStorage).
+                        Žádná data se neodesílají na cizí servery. Aplikace funguje i offline (kromě YouTube).
+                    </p>
+                </div>
+            </div>
+        </article>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-neuro-bg border-t border-slate-800 py-12 text-center">
+        <p class="text-slate-500 text-sm">
+            MONO v1.0 | Single-Tasking Productivity System<br>
+            2025 Google Deepmind Team
+        </p>
+    </footer>
+
+</body>
+
+</html>
