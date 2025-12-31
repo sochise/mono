@@ -137,54 +137,70 @@
         </article>
 
         <article id="funkce" class="mb-20 scroll-mt-32">
-            <h2 class="text-3xl font-bold text-white mb-6 flex items-center gap-3">
+            <h2 class="text-3xl font-bold text-white mb-8 flex items-center gap-3">
                 <span class="text-neuro-focus">03.</span> Klíčové Funkce
             </h2>
-            <ul class="space-y-6">
-                <li class="flex gap-4">
-                    <div class="bg-slate-800 p-3 rounded-lg h-fit">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
-                            class="text-neuro-focus" viewBox="0 0 24 24" stroke="currentColor">
-                            <path d="M12 8v4l3 3" />
-                            <circle cx="12" cy="12" r="9" />
-                        </svg>
+
+            <div class="space-y-12">
+                <!-- Main Screen -->
+                <div class="bg-neuro-card rounded-xl border border-slate-700 overflow-hidden">
+                    <img src="assets/docs_main_view.png" alt="Hlavní obrazovka"
+                        class="w-full border-b border-slate-700/50">
+                    <div class="p-8">
+                        <h3 class="text-2xl text-white font-bold mb-3">Hlavní Panel (Fokus)</h3>
+                        <p class="text-slate-400 mb-4">
+                            Centrální místo pro vaši práci. Zadejte <strong>JEDEN úkol</strong> ("The One Thing"),
+                            nastavte délku bloku (25/50/90 min) a zvolte soundtrack.
+                            Jednoduchost je záměrná – nic vás nesmí rozptylovat. Cirkadiánní logika automaticky upravuje
+                            barevné schéma podle denní doby (po 18:00 se aktivuje Jantarový mód).
+                        </p>
                     </div>
-                    <div>
-                        <h3 class="text-xl text-white font-semibold mb-1">Cirkadiánní Režim</h3>
-                        <p class="text-slate-400">Aplikace vníma čas. Po 18:00 automaticky přejde do <strong>Večerního
-                                módu</strong> (omezení modrého světla) pro ochranu spánku.</p>
+                </div>
+
+                <!-- Blog -->
+                <div class="bg-neuro-card rounded-xl border border-slate-700 overflow-hidden">
+                    <img src="assets/docs_blog_view.png" alt="Blog a Edukace"
+                        class="w-full border-b border-slate-700/50">
+                    <div class="p-8">
+                        <h3 class="text-2xl text-white font-bold mb-3">Neuro-Insights (Blog)</h3>
+                        <p class="text-slate-400 mb-4">
+                            Pochopte "proč". Sekce článků vysvětluje vědecké podklady našich technik (Hnědý šum, NSDR,
+                            Cirkadiánní rytmy).
+                            Přepínejte mezi Fokusem a Články pomocí nového navigačního menu nahoře.
+                        </p>
                     </div>
-                </li>
-                <li class="flex gap-4">
-                    <div class="bg-slate-800 p-3 rounded-lg h-fit">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
-                            class="text-neuro-focus" viewBox="0 0 24 24" stroke="currentColor">
-                            <polyline points="21 8 21 21 3 21 3 8" />
-                            <rect x="1" y="3" width="22" height="5" />
-                            <line x1="10" y1="12" x2="14" y2="12" />
-                        </svg>
+                </div>
+
+                <!-- Tools Grid -->
+                <div class="grid md:grid-cols-2 gap-8">
+                    <!-- Parking Lot -->
+                    <div class="bg-neuro-card rounded-xl border border-slate-700 overflow-hidden flex flex-col">
+                        <img src="assets/docs_parking_view.png" alt="Parkoviště myšlenek"
+                            class="w-full h-48 object-cover object-top border-b border-slate-700/50">
+                        <div class="p-6 flex-1">
+                            <h3 class="text-xl text-white font-bold mb-2">Parkoviště Myšlenek</h3>
+                            <p class="text-slate-400 text-sm">
+                                Externí paměť pro vaše nápady. Když vás při práci něco napadne, neotvírejte novou
+                                záložku.
+                                Zapište to sem (ikona krabice vpravo nahoře) a okamžitě se vraťte k práci.
+                            </p>
+                        </div>
                     </div>
-                    <div>
-                        <h3 class="text-xl text-white font-semibold mb-1">Parkoviště Myšlenek</h3>
-                        <p class="text-slate-400">Posuvný panel vpravo. Slouží jako "externí paměť" pro vše, co vás
-                            napadne během práce. Zapište to a pokračujte. Myšlenky se ukládají lokálně.</p>
+
+                    <!-- Session Log -->
+                    <div class="bg-neuro-card rounded-xl border border-slate-700 overflow-hidden flex flex-col">
+                        <img src="assets/docs_session_view.png" alt="Historie Relace"
+                            class="w-full h-48 object-cover object-top border-b border-slate-700/50">
+                        <div class="p-6 flex-1">
+                            <h3 class="text-xl text-white font-bold mb-2">Historie Relace</h3>
+                            <p class="text-slate-400 text-sm">
+                                Sledujte svůj postup. Zobrazuje dokončené bloky a celkový čas soustředění v dané seanci.
+                                Data se resetují při zavření prohlížeče (podporuje "čistý štít" každý den).
+                            </p>
+                        </div>
                     </div>
-                </li>
-                <li class="flex gap-4">
-                    <div class="bg-slate-800 p-3 rounded-lg h-fit">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
-                            class="text-neuro-focus" viewBox="0 0 24 24" stroke="currentColor">
-                            <path d="M12 20h9" />
-                            <path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z" />
-                        </svg>
-                    </div>
-                    <div>
-                        <h3 class="text-xl text-white font-semibold mb-1">Blog a Edukace</h3>
-                        <p class="text-slate-400">Integrovaný modul článků (vpravo nahoře "Články") vysvětluje vědu za
-                            technikami jako Hnědý šum nebo NSDR.</p>
-                    </div>
-                </li>
-            </ul>
+                </div>
+            </div>
         </article>
 
         <article id="youtube" class="mb-20 scroll-mt-32">
@@ -193,8 +209,11 @@
             </h2>
             <div class="bg-neuro-card p-8 rounded-xl border border-slate-700">
                 <p class="text-slate-300 mb-6">
-                    Můžete vložit libovolné "Focus" video z YouTube (Lofi Girl, Endel, Binaural Beats).
-                    Aplikace automaticky spustí video při startu práce a zastaví ho při pauze.
+                    MONO přímo integruje YouTube přehrávač pro vaše focus playlisty. Video se automaticky:
+                <ul class="list-disc pl-5 mt-2 space-y-1">
+                    <li><strong>Spustí</strong> při startu časovače.</li>
+                    <li><strong>Zastaví</strong> při pauze nebo konci bloku.</li>
+                </ul>
                 </p>
 
                 <h3 class="text-lg font-semibold text-white mb-2">Doporučené Kanály:</h3>
@@ -205,11 +224,11 @@
                 </ul>
 
                 <div class="bg-yellow-500/10 border-l-4 border-yellow-500 p-4 rounded-r">
-                    <h4 class="text-yellow-500 font-bold mb-1">Řešení problémů (Error 153)</h4>
+                    <h4 class="text-yellow-500 font-bold mb-1">Důležité: YouTube Error 150/153</h4>
                     <p class="text-sm text-yellow-200/80">
-                        Pokud vidíte chybu 153 (Video unavailable), znamená to, že YouTube blokuje přehrávání ve vašem
-                        souborovém systému.
-                        <strong>Řešení:</strong> Spusťte aplikaci přes lokální server (viz sekce 05).
+                        Některá videa (např. VEVO hudba) nejdou přehrát mimo YouTube. Pokud se video nenačte, zkuste
+                        najít "No Copyright" verzi nebo jiný kanál.
+                        Také se ujistěte, že aplikaci spouštíte přes <strong>server</strong> (viz níže), ne jako soubor.
                     </p>
                 </div>
             </div>
@@ -217,29 +236,42 @@
 
         <article id="tech" class="mb-20 scroll-mt-32">
             <h2 class="text-3xl font-bold text-white mb-6 flex items-center gap-3">
-                <span class="text-neuro-focus">05.</span> Technické Tipy
+                <span class="text-neuro-focus">05.</span> Nasazení & Spouštění
             </h2>
 
             <div class="space-y-8">
-                <div>
-                    <h3 class="text-xl text-white font-semibold mb-3">Spuštění Lokálního Serveru</h3>
+                <div class="bg-slate-800/50 p-6 rounded-xl border border-slate-700">
+                    <h3 class="text-xl text-white font-semibold mb-3">Online (Doporučeno)</h3>
                     <p class="text-slate-400 mb-3">
-                        Pro plnou funkčnost YouTube přehrávače doporučujeme nespouštět soubor <code>index.html</code>
-                        přímo, ale přes Python server.
+                        Pro bezproblémové fungování YouTube API doporučujeme aplikaci nahrát na statický hosting.
+                        Není potřeba žádný backend.
                     </p>
-                    <div class="bg-black/50 p-4 rounded-lg font-mono text-sm text-green-400 border border-slate-800">
+                    <ul class="list-disc pl-5 text-slate-400 space-y-2">
+                        <li><strong>Netlify Drop:</strong> Pouze přetáhněte složku projektu do prohlížeče.</li>
+                        <li><strong>GitHub Pages:</strong> Nasazení přímo z repozitáře (v Nastavení -> Pages).</li>
+                    </ul>
+                </div>
+
+                <div class="bg-slate-800/50 p-6 rounded-xl border border-slate-700">
+                    <h3 class="text-xl text-white font-semibold mb-3">Lokální Vývoj</h3>
+                    <p class="text-slate-400 mb-3">
+                        Pokud spouštíte aplikaci lokálně, <strong>neotevírejte</strong> <code>index.html</code>
+                        dvojklikem.
+                        YouTube API vyžaduje protokol HTTP/HTTPS.
+                    </p>
+                    <div
+                        class="bg-black/50 p-4 rounded-lg font-mono text-sm text-green-400 border border-slate-800 mb-2">
                         python3 -m http.server 8000
                     </div>
-                    <p class="text-slate-500 text-sm mt-2">Poté otevřete v prohlížeči: <a href="http://localhost:8000"
+                    <p class="text-slate-500 text-sm">Adresa: <a href="http://localhost:8000"
                             class="text-neuro-focus hover:underline">http://localhost:8000</a></p>
                 </div>
 
                 <div>
                     <h3 class="text-xl text-white font-semibold mb-3">Data a Soukromí</h3>
                     <p class="text-slate-400">
-                        Všechna data (historie, parkoviště myšlenek) jsou ukládána <strong>pouze ve vašem
-                            prohlížeči</strong> (LocalStorage).
-                        Žádná data se neodesílají na cizí servery. Aplikace funguje i offline (kromě YouTube).
+                        Všechna data jsou ukládána <strong>pouze ve vašem prohlížeči</strong> (LocalStorage).
+                        Aplikace funguje 100% offline (kromě YouTube funkcionality).
                     </p>
                 </div>
             </div>
