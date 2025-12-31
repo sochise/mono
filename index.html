@@ -804,13 +804,38 @@
             <p class="text-slate-400" data-i18n="updates.subtitle">Přehled novinek a změn v aplikaci MONO.</p>
         </div>
         <div class="space-y-12 border-l border-slate-800 pl-8 ml-4">
+            <!-- v1.1 Polishing -->
+            <div class="relative">
+                <div class="absolute -left-[41px] top-1 w-5 h-5 rounded-full bg-cyan-400 border-4 border-slate-900">
+                </div>
+                <h2 class="text-2xl font-bold text-white mb-2 flex items-center gap-3"> MONO
+                    v1.1 <span
+                        class="text-xs bg-cyan-400/20 text-cyan-400 px-2 py-0.5 rounded-full font-mono">Latest</span>
+                </h2>
+                <div class="text-sm text-slate-500 mb-6 font-mono" data-i18n="updates.v1_1.date">31. Prosince 2025</div>
+                <div class="space-y-6">
+                    <div class="bg-slate-800/40 p-6 rounded-xl border border-slate-700/50">
+                        <h3 class="font-bold text-lg text-white mb-3" data-i18n="updates.v1_1.title">✨ Feedback &
+                            Ladění</h3>
+                        <p class="text-slate-400 mb-4" data-i18n="updates.v1_1.desc">Přidána možnost zpětné vazby a
+                            opravy v překladech.</p>
+                        <ul class="list-disc pl-5 text-slate-400 space-y-1">
+                            <li data-i18n="updates.v1_1.list.feedback"><span class="text-pink-400">Zpětná
+                                    Vazba:</span> Nová sekce pro vaše nápady.</li>
+                            <li data-i18n="updates.v1_1.list.fixes"><span class="text-indigo-400">Fixes:</span>
+                                Opraveno vykreslování HTML tagů v překladech.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
             <!-- v1.0 MONO -->
             <div class="relative">
                 <div class="absolute -left-[41px] top-1 w-5 h-5 rounded-full bg-neuro-focus border-4 border-slate-900">
                 </div>
                 <h2 class="text-2xl font-bold text-white mb-2 flex items-center gap-3"> MONO
                     v1.0 <span
-                        class="text-xs bg-neuro-focus/20 text-neuro-focus px-2 py-0.5 rounded-full font-mono">Current</span>
+                        class="text-xs bg-neuro-focus/20 text-neuro-focus px-2 py-0.5 rounded-full font-mono">Released</span>
                 </h2>
                 <div class="text-sm text-slate-500 mb-6 font-mono" data-i18n="updates.v1.date">23. Prosince 2025</div>
                 <div class="space-y-6">
@@ -1143,6 +1168,15 @@
                 updates: {
                     title: "Aktualizace",
                     subtitle: "Přehled novinek a změn v aplikaci MONO.",
+                    v1_1: {
+                        date: "31. Prosince 2025",
+                        title: "✨ Feedback & Ladění",
+                        desc: "Přidána možnost zpětné vazby a opravy v překladech.",
+                        list: {
+                            feedback: "<span class=\"text-pink-400\">Zpětná Vazba:</span> Nová sekce pro vaše nápady.",
+                            fixes: "<span class=\"text-indigo-400\">Fixes:</span> Opraveno vykreslování HTML tagů v překladech."
+                        }
+                    },
                     v1: {
                         date: "23. Prosince 2025",
                         upgrade: {
@@ -1311,6 +1345,15 @@
                 updates: {
                     title: "Updates",
                     subtitle: "Overview of news and changes in MONO.",
+                    v1_1: {
+                        date: "December 31, 2025",
+                        title: "✨ Feedback & Polish",
+                        desc: "Added feedback capability and fixed translation issues.",
+                        list: {
+                            feedback: "<span class=\"text-pink-400\">Feedback:</span> New section for your ideas.",
+                            fixes: "<span class=\"text-indigo-400\">Fixes:</span> Fixed HTML tag rendering in translations."
+                        }
+                    },
                     v1: {
                         date: "December 23, 2025",
                         upgrade: {
