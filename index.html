@@ -187,16 +187,17 @@
 
     <nav class="fixed top-0 w-full z-50 px-6 py-4 flex justify-between items-center backdrop-blur-md bg-slate-900/50 border-b border-slate-700/50 transition-all duration-300"
         id="mainNav">
-        <div class="flex items-center gap-4">
+        <!-- Logo -->
+        <div class="flex items-center gap-4 z-50">
             <div class="w-2 h-8 bg-neuro-focus rounded-full shadow-[0_0_15px_rgba(14,165,233,0.5)]"></div>
             <h1 class="text-xl font-bold tracking-tight text-white/90">MONO <span
-                    class="text-xs font-normal text-slate-400 ml-1 border border-slate-700/50 rounded-full px-2 py-0.5 bg-slate-800/50 backdrop-blur-sm">PF
+                    class="text-xs font-normal text-slate-400 ml-1 border border-slate-700/50 rounded-full px-2 py-0.5 bg-slate-800/50 backdrop-blur-sm hidden sm:inline-block">PF
                     2026 Edition</span></h1>
         </div>
 
-        <!-- Central Toggles -->
+        <!-- Desktop Navigation (Centered) -->
         <div
-            class="absolute left-1/2 transform -translate-x-1/2 flex items-center bg-slate-900/60 backdrop-blur-xl rounded-full p-2 border border-white/10 gap-2 shadow-2xl shadow-black/50 ring-1 ring-white/5">
+            class="hidden md:flex absolute left-1/2 transform -translate-x-1/2 items-center bg-slate-900/60 backdrop-blur-xl rounded-full p-2 border border-white/10 gap-2 shadow-2xl shadow-black/50 ring-1 ring-white/5">
             <button id="navFocusBtn" data-i18n="nav.app"
                 class="px-6 py-2 rounded-full text-sm font-medium transition-all duration-300 bg-neuro-focus text-white shadow-[0_0_20px_rgba(14,165,233,0.3)] tracking-wide">Fokus</button>
             <button id="navBlogBtn" data-i18n="nav.blog"
@@ -207,40 +208,79 @@
                 class="px-6 py-2 rounded-full text-sm font-medium text-slate-400 hover:text-white hover:bg-white/5 transition-all duration-300 tracking-wide">Zpětná
                 Vazba</button>
         </div>
-        <!-- Tool Toggles (Absolute Right) -->
-        <div class="absolute right-6 flex gap-4 items-center">
-            <button id="langToggle" onclick="setLanguage(currentLang === 'cs' ? 'en' : 'cs')"
-                class="text-xs font-bold font-mono text-slate-400 hover:text-white border border-slate-700/50 rounded px-2 py-1 hover:bg-slate-800 transition-colors mr-2">EN</button>
-            <button id="parkingLotToggle"
-                class="p-3 rounded-full hover:bg-slate-800 text-slate-400 hover:text-neuro-focus transition-all relative group"
-                title="Parking Lot">
-                <div
-                    class="absolute top-3 right-3 w-2 h-2 bg-neuro-focus rounded-full animate-ping group-hover:block hidden">
-                </div>
-                <!-- Box Archive Icon --><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                    stroke-linejoin="round">
-                    <polyline points="21 8 21 21 3 21 3 8"></polyline>
-                    <rect x="1" y="3" width="22" height="5"></rect>
-                    <line x1="10" y1="12" x2="14" y2="12"></line>
+
+        <!-- Right Side Tools & Mobile Toggle -->
+        <div class="flex gap-2 sm:gap-4 items-center z-50">
+            <!-- Tools Group -->
+            <div class="flex items-center bg-slate-800/50 rounded-full p-1 border border-slate-700/50">
+                <button id="langToggle" onclick="setLanguage(currentLang === 'cs' ? 'en' : 'cs')"
+                    class="w-8 h-8 flex items-center justify-center text-xs font-bold font-mono text-slate-400 hover:text-white hover:bg-slate-700/50 rounded-full transition-colors">EN</button>
+                <div class="w-px h-4 bg-slate-700 mx-1"></div>
+                <button id="parkingLotToggle"
+                    class="p-2 rounded-full hover:bg-slate-700/50 text-slate-400 hover:text-neuro-focus transition-all relative group"
+                    title="Parking Lot">
+                    <!-- Ping Animation -->
+                    <span class="absolute top-2 right-2 flex h-2 w-2">
+                        <span
+                            class="animate-ping absolute inline-flex h-full w-full rounded-full bg-neuro-focus opacity-0 group-hover:opacity-75"></span>
+                        <span
+                            class="relative inline-flex rounded-full h-2 w-2 bg-neuro-focus hidden group-hover:block"></span>
+                    </span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="21 8 21 21 3 21 3 8"></polyline>
+                        <rect x="1" y="3" width="22" height="5"></rect>
+                        <line x1="10" y1="12" x2="14" y2="12"></line>
+                    </svg>
+                </button>
+                <button id="sessionLogToggle"
+                    class="p-2 rounded-full hover:bg-slate-700/50 text-slate-400 hover:text-cyan-400 transition-all"
+                    title="Session Log"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <polyline points="12 6 12 12 16 14"></polyline>
+                    </svg></button>
+                <button id="helpToggle"
+                    class="p-2 rounded-full hover:bg-slate-700/50 text-slate-400 hover:text-emerald-400 transition-all"
+                    title="Nápověda & Techniky"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+                        <line x1="12" y1="17" x2="12.01" y2="17"></line>
+                    </svg></button>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobileMenuBtn" class="md:hidden p-2 text-slate-300 hover:text-white transition-colors">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="w-8 h-8">
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
                 </svg>
-            </button><button id="sessionLogToggle"
-                class="p-3 rounded-full hover:bg-slate-800 text-slate-400 hover:text-cyan-400 transition-all"
-                title="Session Log"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <circle cx="12" cy="12" r="10"></circle>
-                    <polyline points="12 6 12 12 16 14"></polyline>
-                </svg></button><button id="helpToggle"
-                class="p-3 rounded-full hover:bg-slate-800 text-slate-400 hover:text-emerald-400 transition-all"
-                title="Nápověda & Techniky"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                    stroke-linejoin="round">
-                    <circle cx="12" cy="12" r="10"></circle>
-                    <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
-                    <line x1="12" y1="17" x2="12.01" y2="17"></line>
-                </svg></button>
+            </button>
         </div>
     </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobileMenuOverlay"
+        class="fixed inset-0 bg-slate-900/95 backdrop-blur-xl z-40 hidden flex flex-col justify-center items-center gap-8 md:hidden transition-all duration-300 opacity-0">
+        <button id="mobNavFocus" class="text-2xl font-bold text-white hover:text-neuro-focus transition-colors"
+            data-i18n="nav.app">Fokus</button>
+        <button id="mobNavBlog" class="text-2xl font-bold text-slate-400 hover:text-white transition-colors"
+            data-i18n="nav.blog">Články</button>
+        <button id="mobNavUpdates" class="text-2xl font-bold text-slate-400 hover:text-white transition-colors"
+            data-i18n="nav.docs">Aktualizace</button>
+        <button id="mobNavFeedback" class="text-2xl font-bold text-slate-400 hover:text-white transition-colors"
+            data-i18n="nav.feedback">Zpětná Vazba</button>
+
+        <div class="w-12 h-1 bg-slate-800 rounded-full my-4"></div>
+
+        <p class="text-slate-500 text-sm font-mono">MONO v1.1</p>
+    </div>
     <!-- Parking Lot Overlay -->
     <div id="parkingLotOverlay"
         class="fixed inset-y-0 right-0 w-full md:w-96 bg-slate-800 shadow-2xl z-50 slide-in-right border-l border-slate-700 flex flex-col p-6">
@@ -2449,6 +2489,45 @@
                 e.returnValue = '';
             }
         });
+
+        // Mobile Menu Logic
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenuOverlay = document.getElementById('mobileMenuOverlay');
+        let isMobileMenuOpen = false;
+
+        if (mobileMenuBtn && mobileMenuOverlay) {
+            mobileMenuBtn.addEventListener('click', () => {
+                isMobileMenuOpen = !isMobileMenuOpen;
+                if (isMobileMenuOpen) {
+                    mobileMenuOverlay.classList.remove('hidden');
+                    // Small delay to allow display:flex to apply before opacity transition
+                    setTimeout(() => mobileMenuOverlay.classList.remove('opacity-0'), 10);
+                } else {
+                    mobileMenuOverlay.classList.add('opacity-0');
+                    setTimeout(() => mobileMenuOverlay.classList.add('hidden'), 300);
+                }
+            });
+
+            // Close mobile menu on link click
+            const closeMobileMenu = () => {
+                isMobileMenuOpen = false;
+                mobileMenuOverlay.classList.add('opacity-0');
+                setTimeout(() => mobileMenuOverlay.classList.add('hidden'), 300);
+            };
+
+            const mobNavIds = ['mobNavFocus', 'mobNavBlog', 'mobNavUpdates', 'mobNavFeedback'];
+            const navBtnIds = ['navFocusBtn', 'navBlogBtn', 'navUpdatesBtn', 'navFeedbackBtn'];
+
+            mobNavIds.forEach((mobId, idx) => {
+                const btn = document.getElementById(mobId);
+                if (btn) {
+                    btn.addEventListener('click', () => {
+                        closeMobileMenu();
+                        document.getElementById(navBtnIds[idx]).click();
+                    });
+                }
+            });
+        }
 
     </script>
 </body>
