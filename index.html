@@ -1801,10 +1801,18 @@
         }
 
         // Load YouTube API
-        var tag = document.createElement('script');
-        tag.src = "https://www.youtube.com/iframe_api";
-        var firstScriptTag = document.getElementsByTagName('script')[0];
-        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+        // Load YouTube API Lazy
+        var isYouTubeApiLoading = false;
+
+        function loadYoutubeApi() {
+            if (isYouTubeApiLoading || isYouTubeApiReady) return;
+            isYouTubeApiLoading = true;
+
+            var tag = document.createElement('script');
+            tag.src = "https://www.youtube.com/iframe_api";
+            var firstScriptTag = document.getElementsByTagName('script')[0];
+            firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+        }
 
         function onYouTubeIframeAPIReady() {
             isYouTubeApiReady = true;
@@ -1816,15 +1824,15 @@
                 height: '100%',
                 width: '100%',
                 videoId: '',
+                host: 'https://www.youtube-nocookie.com', // Enable Privacy Enhanced Mode
                 playerVars: {
                     'playsinline': 1,
                     'controls': 0, // No controls, controlled by app
                     'disablekb': 1,
                     'fs': 0,
-                    'rel': 0
-                }
-
-                ,
+                    'rel': 0,
+                    'origin': window.location.origin // Security best practice
+                },
                 events: {
                     'onReady': onPlayerReady,
                     'onError': onPlayerError,
@@ -1874,6 +1882,7 @@
 
         if (ytUrlInput) {
             ytUrlInput.addEventListener('input', (e) => {
+                loadYoutubeApi(); // Lazy load on interaction
                 const videoId = getYoutubeId(e.target.value);
 
                 if (videoId) {
@@ -1891,6 +1900,7 @@
         }
 
         function startSession() {
+            loadYoutubeApi(); // Lazy load on start
             const task = els.taskInput.value.trim();
 
             if (!task) {
@@ -1904,10 +1914,11 @@
             if (ytWorkPlayer && ytUrlInput) {
                 const videoId = getYoutubeId(ytUrlInput.value);
 
+                // If player is ready, load. If not, onPlayerReady/stateChange or future logic will handle it.
+                // Since we just called loadYoutubeApi(), it might not be ready instantly.
                 if (videoId && player && player.loadVideoById) {
                     ytWorkPlayer.classList.remove('hidden'); // Show container
                     player.loadVideoById(videoId);
-                    // player.playVideo(); // loadVideoById usually autoplaS
                 }
             }
 
