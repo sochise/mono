@@ -978,49 +978,11 @@
                 něco nelíbí? Dejte nám vědět. Všechny podněty jsou veřejné.</p>
         </div>
 
-        <div class="grid md:grid-cols-2 gap-12">
-            <!-- Form -->
-            <div class="bg-slate-800/50 p-8 rounded-2xl border border-slate-700/50 h-fit sticky top-32">
-                <h3 class="text-xl text-white font-bold mb-6" data-i18n="feedback.formTitle">Přidat Podnět</h3>
-                <form id="feedbackForm" class="space-y-4">
-                    <div>
-                        <label class="block text-xs uppercase tracking-wider text-slate-500 mb-2"
-                            data-i18n="feedback.labelName">Jméno (Volitelné)</label>
-                        <input type="text" id="fbName"
-                            class="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-3 text-white focus:border-neuro-focus focus:ring-1 focus:ring-neuro-focus outline-none transition-all"
-                            placeholder="Anonym">
-                    </div>
-                    <div>
-                        <label class="block text-xs uppercase tracking-wider text-slate-500 mb-2"
-                            data-i18n="feedback.labelMessage">Zpráva</label>
-                        <textarea id="fbMessage" rows="5" required
-                            class="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-3 text-white focus:border-neuro-focus focus:ring-1 focus:ring-neuro-focus outline-none transition-all"
-                            placeholder="Co byste vylepšili?"></textarea>
-                    </div>
-                    <button type="submit"
-                        class="w-full bg-neuro-focus hover:bg-sky-400 text-white font-bold py-3 rounded-lg transition-all shadow-lg shadow-sky-500/20"
-                        data-i18n="feedback.submitBtn">
-                        Odeslat Zpětnou Vazbu
-                    </button>
-                    <p class="text-xs text-slate-500 text-center mt-4">Data se ukládají pouze lokálně ve vašem
-                        prohlížeči.
-                    </p>
-                </form>
-            </div>
-
-            <!-- List -->
-            <div>
-                <div class="flex justify-between items-center mb-6">
-                    <h3 class="text-xl text-white font-bold" data-i18n="feedback.listTitle">Nedávné Podněty</h3>
-                    <span class="bg-slate-800 text-neuro-focus px-3 py-1 rounded-full text-sm font-bold"
-                        id="feedbackCount">0</span>
-                </div>
-                <div id="feedbackList" class="space-y-4">
-                    <!-- Dynamic Content -->
-                    <div class="text-center text-slate-500 py-12" data-i18n="feedback.empty">Zatím žádné podněty. Buďte
-                        první!</div>
-                </div>
-            </div>
+        <div class="flex justify-center w-full">
+            <iframe
+                src="https://docs.google.com/forms/d/e/1FAIpQLSe-74Lw0FTS_hmNFFNlYiGphNFH9tYVyKTQUEydP8IHklud0Q/viewform?embedded=true"
+                width="100%" height="759" frameborder="0" marginheight="0" marginwidth="0"
+                class="w-full max-w-2xl border border-slate-700/50 rounded-xl bg-slate-800/50">Načítání…</iframe>
         </div>
     </section>
     <!-- Overlay Background Elements -->
